@@ -1,0 +1,22 @@
+<div class="flex flex-col gap-5">
+  <p>{{courseName}}</p>
+  <input class="border border-neutral-400 outline-none rounded-md p-2" type="text" value="{{courseName}}">
+  <p [class]="className">This is property binding. I added this background color dynamically</p>
+  <button class="bg-blue-500 text-white p-2 rounded-md w-20 font-semibold cursor-pointer"
+    (click)="showAlert('You have clicked button')">Click</button>
+  <span class="bg-red-500 text-white p-2 rounded-md w-50 font-semibold flex justify-center cursor-pointer"
+    (click)="changeCourseName()">Change course name</span>
+</div>
+<div class="py-5 px-2 my-4 border border-neutral-300  rounded-md">
+  <h2 class="mb-2 bg-amber-200 p-1 rounded-md">This is two way binding. The courseName will change depending on what we type in the input field</h2>
+  <input class="border border-neutral-400 rounded-md p-2" type="text" [(ngModel)]="courseName"> - {{courseName}} // ngModel only works on input fields
+  <br>
+  <br>
+  <select class="p-2 rounded-md border border-neutral-300" name="" id="" [(ngModel)]="stateName">
+    <option value="">Select</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Meghalaya">Meghalaya</option>
+  </select>
+  <p (click)="changeFirstName()">{{firstName()}}</p>
+</div>
