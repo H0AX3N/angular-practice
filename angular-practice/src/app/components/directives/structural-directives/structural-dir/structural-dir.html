@@ -1,0 +1,19 @@
+<div class="grid grid-cols-4 gap-3 h-40">
+  <div class="flex flex-col gap-2 justify-between rounded-md border border-neutral-400 p-3">
+    @if (isVisible) {
+      <p class="bg-blue-500 py-6 rounded-sm flex flex-1 items-center justify-center">Block 1</p>
+    } @else {
+      <p class="bg-gray-200 py-6 rounded-sm flex flex-1 items-center justify-center text-gray-500">Block 1 (Hidden)</p>
+    }
+
+    <div class="flex justify-between gap-2">
+      <button class="bg-slate-600 text-white px-3 py-2 rounded-md flex flex-1 justify-center"
+        (click)="showBlock1()">Show</button>
+      <button class="bg-green-600 text-white px-3 py-2 rounded-md flex flex-1 justify-center"
+        (click)="hideBlock1()">Hide</button>
+    </div>
+  </div>
+  <div class="bg-red-500 rounded-md">Block 2</div>
+  <div class="bg-yellow-500 rounded-md">Block 3</div>
+  <div class="bg-green-500 rounded-md">Block 4</div>
+</div>
