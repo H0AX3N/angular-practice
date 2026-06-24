@@ -6,10 +6,12 @@ import { DataBinding } from './components/data-binding/data-binding';
 import { StructuralDir } from './components/directives/structural-directives/structural-dir/structural-dir';
 import { SignalExample } from './components/signal-example/signal-example';
 import { ControlFlow } from './components/control-flow/control-flow';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { AttributeDir } from './components/directives/attribute-dir/attribute-dir';
 
 @Component({
   selector: 'app-root',
-  imports: [AddEmployee, EmployeeList, EmployeeNames, DataBinding, StructuralDir, SignalExample, ControlFlow],
+  imports: [AddEmployee, EmployeeList, EmployeeNames, DataBinding, StructuralDir, SignalExample, ControlFlow, RouterLink, RouterOutlet, AttributeDir],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,12 @@
+<div>
+  <h1 class="my-2 rounded-md px-3 py-2" [ngClass]="textClassName()">Attrribute directive text - {{textClassName()}}</h1>
+  <div class="flex gap-3">
+    <button class="bg-green-300 px-3 py-2 rounded" (click)="setBgClass('bg-green-300')">Green</button>
+    <button class="bg-blue-300 px-3 py-2 rounded" (click)="setBgClass('bg-blue-300')">Blue</button>
+  </div>
+</div>
+<br>
+<div>
+  <h2 [ngStyle]="{'background-color': isDivGreen ? 'blue' : 'green'}">Hello</h2>
+  <button class="bg-green-300 px-3 py-2 rounded" (click)="toggleBg()">Toggle</button>
+</div>
