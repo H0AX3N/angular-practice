@@ -10,3 +10,22 @@
   <h2 [ngStyle]="{'background-color': isDivGreen ? 'blue' : 'green'}">Hello</h2>
   <button class="bg-green-300 px-3 py-2 rounded" (click)="toggleBg()">Toggle</button>
 </div>
+<div>
+  <p>firstName is {{firstName}}</p>
+  <p>{{firstName | uppercase}}</p>
+</div>
+<div>
+  <p>Roll No.: {{rollNo}}</p>
+  <p>{{rollNo | slice: 0 : 3}}</p>
+</div>
+<div>
+  <p>student obj: {{studentObj}}</p>
+  <p>{{studentObj | json}}</p>
+</div>
+<div>
+  <p>{{currentDate}}</p>
+  <p>{{currentDate | date}}</p>
+  <p>{{currentDate | date: 'dd-MM-yy'}}</p>
+  <p>{{currentDate | date: 'dd/MMM/yy'}}</p>
+  <p>{{currentDate | date: 'dd-MM-yyyy'}}</p>
+</div>
